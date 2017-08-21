@@ -1,7 +1,7 @@
 {
   "name": "typescript-observable",
-  "version": "1.0.1",
-  "description": "Adds classes and interfaces to make JavaScript classes observable.",
+  "version": "1.0.0",
+  "description": "Adds classes and interfaces to make Typescript classes observable.",
   "main": "src/index.ts",
   "repository": "https://github.com/afsa/observable",
   "author": "Flare Mind <info@flaremind.com>",
