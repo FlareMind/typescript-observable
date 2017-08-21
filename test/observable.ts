@@ -45,31 +45,31 @@ describe('Observable', () => {
                 };
 
             observable.on('test-root', () => {
-                flags.stringFunction = true;
+                flags['stringFunction'] = true;
                 finishTest();
             });
 
             observable.on('test-root', {
                 update: () => {
-                    flags.stringObserver = true;
+                    flags['stringObserver'] = true;
                     finishTest();
                 }
             });
 
             observable.on(new TestRootEvent(), () => {
-                flags.eventFunction = true;
+                flags['eventFunction'] = true;
                 finishTest();
             });
 
             observable.on(new TestRootEvent(), {
                 update: () => {
-                    flags.eventObserver = true;
+                    flags['eventObserver'] = true;
                     finishTest();
                 }
             });
 
             observable.on('not-test-root', () => {
-                flags.not = false;
+                flags['not'] = false;
                 finishTest();
             });
 
@@ -77,7 +77,7 @@ describe('Observable', () => {
 
             // Check that the right flags are set
             function finishTest() {
-                if (flags.not === false) {
+                if (flags['not'] === false) {
                     done(new Error('"not-test-root" should not be called '));
                 }
 
@@ -98,27 +98,27 @@ describe('Observable', () => {
                 };
 
             observable.on('test-child', () => {
-                flags.stringChild = true;
+                flags['stringChild'] = true;
                 finishTest();
             });
 
             observable.on('test-root', () => {
-                flags.stringParent = true;
+                flags['stringParent'] = true;
                 finishTest();
             });
 
             observable.on(new TestChildEvent(), () => {
-                flags.eventChild = true;
+                flags['eventChild'] = true;
                 finishTest();
             });
 
             observable.on(new TestRootEvent(), () => {
-                flags.eventParent = true;
+                flags['eventParent'] = true;
                 finishTest();
             });
 
             observable.on(new TestGrandChildEvent(), () => {
-                flags.not = false;
+                flags['not'] = false;
                 finishTest();
             });
 
@@ -126,7 +126,7 @@ describe('Observable', () => {
 
             // Check that the right flags are set
             function finishTest() {
-                if (flags.not === false) {
+                if (flags['not'] === false) {
                     done(new Error('"not-test-root" should not be called '));
                 }
 
@@ -145,17 +145,17 @@ describe('Observable', () => {
                 };
 
             observable.on('test-grand-child', () => {
-                flags.grandChild = true;
+                flags['grandChild'] = true;
                 finishTest();
             });
 
             observable.on('test-child', () => {
-                flags.child = true;
+                flags['child'] = true;
                 finishTest();
             });
 
             observable.on('test-root', () => {
-                flags.root = true;
+                flags['root'] = true;
                 finishTest();
             });
 
@@ -221,7 +221,7 @@ describe('Observable', () => {
 
         it('should not block code', done => {
             let observable = new Observable(),
-                stop : number = Date.now() + 100,
+                stop : number = Date.now() + 25,
                 sync : number,
                 async : number;
 
