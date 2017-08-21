@@ -1,6 +1,6 @@
 import 'mocha'
 import { expect } from 'chai'
-import {ChangeObservable} from "../src/change-observable";
+import {ChangeObservable} from "../index";
 import {TestRootEvent} from "./events";
 
 describe('ChangeObservable', () => {
