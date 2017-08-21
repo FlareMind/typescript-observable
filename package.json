@@ -2,7 +2,7 @@
   "name": "typescript-observable",
   "version": "1.0.4",
   "description": "Adds classes and interfaces to make Typescript classes observable.",
-  "main": "src/index.ts",
+  "main": "index.ts",
   "repository": "https://github.com/flaremind/typescript-observable",
   "author": "Flare Mind <info@flaremind.com>",
   "license": "MIT",
