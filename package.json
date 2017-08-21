@@ -1,0 +1,25 @@
+{
+  "name": "typescript-observable",
+  "version": "1.0.1",
+  "description": "Adds classes and interfaces to make JavaScript classes observable.",
+  "main": "src/index.ts",
+  "repository": "https://github.com/afsa/observable",
+  "author": "Flare Mind <info@flaremind.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha -r ts-node/register test/*.ts"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.3",
+    "@types/mocha": "^2.2.41",
+    "chai": "^4.1.1",
+    "mocha": "^3.5.0",
+    "ts-loader": "^2.3.2",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.4.2"
+  },
+  "dependencies": {
+    "@types/core-js": "^0.9.42",
+    "core-js": "^2.5.0"
+  }
+}
