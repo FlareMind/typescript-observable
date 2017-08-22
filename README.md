@@ -95,7 +95,7 @@ testObservable.bar();
 ```
 
 ## Contribute
-Make sure to compile the project and run the tests
+Make sure to run the tests
 ```
 npm test
 ```
