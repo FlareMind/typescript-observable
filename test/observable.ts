@@ -1,8 +1,9 @@
 import 'mocha'
 import { expect } from 'chai'
 
-import {Observable} from '../src/observable'
 import {TestChildEvent, TestGrandChildEvent, TestRootEvent} from "./events";
+import {Observable} from '../dist/index'
+
 
 const NUM_OF_OBSERVERS_TO_ADD = 10;
 

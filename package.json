@@ -1,25 +1,27 @@
 {
   "name": "typescript-observable",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Adds classes and interfaces to make Typescript classes observable.",
-  "main": "index.ts",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
   "repository": "https://github.com/flaremind/typescript-observable",
   "author": "Flare Mind <info@flaremind.com>",
   "license": "MIT",
   "scripts": {
-    "test": "mocha -r ts-node/register test/*.ts"
+    "build": "tsc -p ./tsconfig.json",
+    "test": "npm run build && mocha -r ts-node/register test/*.ts"
   },
   "devDependencies": {
     "@types/chai": "^4.0.3",
     "@types/mocha": "^2.2.41",
     "chai": "^4.1.1",
     "mocha": "^3.5.0",
-    "ts-loader": "^2.3.2",
     "ts-node": "^3.3.0",
     "typescript": "^2.4.2"
   },
   "dependencies": {
     "@types/core-js": "^0.9.42",
-    "core-js": "^2.5.0"
+    "core-js": "^2.5.0",
+    "typescript-collections": "^1.2.3"
   }
 }
