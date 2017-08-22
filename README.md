@@ -97,6 +97,5 @@ testObservable.bar();
 ## Contribute
 Make sure to compile the project and run the tests
 ```
-tsc
 npm test
 ```
