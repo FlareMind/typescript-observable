@@ -3,7 +3,7 @@ import "core-js/es6/array"
 
 import {IObservable} from "./interfaces/observable";
 import {IObservableEvent} from "./interfaces/observable-event";
-import {IObserver} from "./interfaces/observer";
+import {IObserver, ObserverCallback} from "./interfaces/observer";
 import {IObserverItem} from "./interfaces/obervable-item"
 import {ICancel} from "./interfaces/cancel";
 
@@ -21,7 +21,8 @@ export class Observable implements IObservable {
         this.observers.splice(0, this.observers.length);
     }
 
-    on(type: string | IObservableEvent | (string | IObservableEvent)[], callback: Function | IObserver) : ICancel {
+    on(type: string | IObservableEvent | (string | IObservableEvent)[], callback: ObserverCallback | IObserver)
+    : ICancel {
         let cancel : ICancel = {
             cancel: () => {
                 let index : number = this.observers.findIndex((item : IObserverItem) => item.id === cancel);
