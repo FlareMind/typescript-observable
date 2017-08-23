@@ -11,7 +11,7 @@ npm install --save typescript-observable
 ## Observable
 A class for observable objects.
 
-* `on(type : string | string[], callback : (callback : any) => void | IObserver) : { cancel : Function }`
+* `on(type : string | string[], callback : (data : any) => void | IObserver) : { cancel : Function }`
 Adds the observer `callback` to the event `type`. The returned object has a function `cancel` that removes the listener.
 * `off(observer : IObserver) : boolean`
 Removes the observer. Only works if the bound observer is of type `IObserver`. Returns `true` if the removal was successful, otherwise false.
