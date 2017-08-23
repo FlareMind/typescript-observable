@@ -1,6 +1,6 @@
 {
   "name": "typescript-observable",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Adds classes and interfaces to make Typescript classes observable.",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
