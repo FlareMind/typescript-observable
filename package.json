@@ -1,6 +1,6 @@
 {
   "name": "typescript-observable",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Adds classes and interfaces to make Typescript classes observable.",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
@@ -9,7 +9,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc -p ./tsconfig.json",
-    "test": "npm run build && mocha -r ts-node/register test/observable.ts test/change-observable.ts"
+    "test": "mocha -r ts-node/register test/observable.ts test/change-observable.ts"
   },
   "devDependencies": {
     "@types/chai": "^4.0.3",
@@ -21,7 +21,6 @@
   },
   "dependencies": {
     "@types/core-js": "^0.9.42",
-    "core-js": "^2.5.0",
-    "typescript-collections": "^1.2.3"
+    "core-js": "^2.5.0"
   }
 }

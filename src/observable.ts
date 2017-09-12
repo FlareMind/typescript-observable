@@ -1,5 +1,6 @@
 import "core-js/es6/promise";
 import "core-js/es6/array"
+import "core-js/es6/set"
 
 import {IObservable} from "./interfaces/observable";
 import {IObservableEvent} from "./interfaces/observable-event";

@@ -2,7 +2,7 @@ import 'mocha'
 import { expect } from 'chai'
 
 import {TestChildEvent, TestGrandChildEvent, TestRootEvent} from "./events";
-import {Observable} from '../dist/index'
+import {Observable} from '../src/index'
 
 
 const NUM_OF_OBSERVERS_TO_ADD = 10;
