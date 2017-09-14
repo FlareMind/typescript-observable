@@ -1,4 +1,6 @@
 # typescript-observable
+[![Build Status](https://travis-ci.org/FlareMind/typescript-observable.svg?branch=master)](https://travis-ci.org/FlareMind/typescript-observable.svg?branch=master)
+
 Adds classes and interfaces to make Typescript classes observable.
 
 ### Installation
