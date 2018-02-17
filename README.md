@@ -46,7 +46,7 @@ Name of the event.
 ## IObserver
 An interface that defines an observer.
 
-* `update(data : any) : void`
+* `update(data : any, name?: string) : void`
 Called when the observers are notified.
 
 
@@ -71,7 +71,7 @@ class TestObservable extends Observable {
         message: 'rootEvent was called'
     });
   }
-  
+
   bar() : void {
     // do something else
     // notify observers listening to the childEvent and the rootEvent
@@ -84,26 +84,26 @@ class TestObservable extends Observable {
 let testObservable = new TestObservable();
 
 // Called on rootEvent and childEvent
-testObservable.on('root', data => {
-    console.log('root observer', data.message);
+testObservable.on('root', (data, name) => {
+    console.log('root observer', data.message, name);
 });
 
 // Called on childEvent
-testObservable.on('child', data => {
-    console.log('child observer', data.message);
+testObservable.on('child', (data, name) => {
+    console.log('child observer', data.message, name);
 });
 
 testObservable.foo();
 /**
  * Prints:
- * root observer, rootEvent was called
+ * root observer, rootEvent was called, root
  */
 
 testObservable.bar();
 /*
  * Prints:
- * root observer, childEvent was called
- * child observer, childEvent was called
+ * root observer, childEvent was called, child
+ * child observer, childEvent was called, child
  */
 ```
 

@@ -1,5 +1,5 @@
 export interface IObserver {
-    update(event: any) : void;
+    update(event: any, name?: String) : void;
 }
 
-export type ObserverCallback = (data : any) => void;
+export type ObserverCallback = (data : any, name?: string) => void;

@@ -79,7 +79,8 @@ export class Observable implements IObservable {
 
         // Make function decoupled
         Promise.resolve().then(() => {
-            let types : string[] = [event.name];
+            let types: string[] = [event.name],
+                calledEventName: string = event.name;
 
             // Select all events to be called
             while (event.parent !== undefined && event.parent !== null) {
@@ -91,9 +92,9 @@ export class Observable implements IObservable {
             this.observers.forEach(observer => {
                 if (types.some(type => observer.types.has(type))) {
                     if (isObserver(observer.callback)) {
-                        observer.callback.update(data);
+                        observer.callback.update(data, calledEventName);
                     } else {
-                        observer.callback(data);
+                        observer.callback(data, calledEventName);
                     }
                 }
             });

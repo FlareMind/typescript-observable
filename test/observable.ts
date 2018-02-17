@@ -249,6 +249,30 @@ describe('Observable', () => {
                 }
             }
         });
+
+        it('should give the name of the called event', done => {
+            let observable = new Observable();
+
+            observable.on('test-root', (data, name) => {
+                if (name === 'test-root') {
+                    done();
+                }
+            });
+
+            observable.notify(new TestRootEvent(), {});
+        });
+
+        it('should give the name of the called event if the child event is called', done => {
+            let observable = new Observable();
+
+            observable.on('test-root', (data, name) => {
+                if (name === 'test-child') {
+                    done();
+                }
+            });
+
+            observable.notify(new TestChildEvent(), {});
+        });
     });
 
     describe('off and cancel', () => {
