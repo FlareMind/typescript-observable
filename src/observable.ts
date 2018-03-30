@@ -75,10 +75,10 @@ export class Observable implements IObservable {
         return false;
     }
 
-    notify(event: IObservableEvent, data: any): void {
+    notify(event: IObservableEvent, data: any): Promise<void> {
 
         // Make function decoupled
-        Promise.resolve().then(() => {
+        return Promise.resolve().then(() => {
             let types: string[] = [event.name],
                 calledEventName: string = event.name;
 

@@ -1,3 +1,7 @@
+# 1.0.16 (2018-03-30)
+## Enhancement
+* Notify returns a promise.
+
 # 1.0.15 (2018-02-17)
 ## Enhancement
 * Added name of the called type in callback as a parameter.

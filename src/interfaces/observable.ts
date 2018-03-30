@@ -8,7 +8,7 @@ export interface IObservable {
     count() : number;
     clear() : void;
 
-    notify(event: IObservableEvent, data: any) : void;
+    notify(event: IObservableEvent, data: any) : Promise<void>;
 }
 
 export interface IChangeObservable extends IObservable{

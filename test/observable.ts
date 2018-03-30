@@ -273,6 +273,22 @@ describe('Observable', () => {
 
             observable.notify(new TestChildEvent(), {});
         });
+
+        it('should return an promise that is resolved when all observers are called', done => {
+            let observable = new Observable(),
+                shouldBeTrue = false;
+
+            observable.on('test-root', () => {
+                shouldBeTrue = true;
+            });
+
+            observable.notify(new TestRootEvent(), {})
+                .then(() => {
+                    if (shouldBeTrue) {
+                        done();
+                    }
+                });
+        });
     });
 
     describe('off and cancel', () => {

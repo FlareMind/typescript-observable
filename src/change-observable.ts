@@ -17,8 +17,8 @@ export class ChangeObservable extends Observable implements IChangeObservable {
         this.isChanged = false;
     }
 
-    notify(event: IObservableEvent, data: any): void {
+    notify(event: IObservableEvent, data: any): Promise<void> {
         this.clearChanged();
-        super.notify(event, data);
+        return super.notify(event, data);
     }
 }
